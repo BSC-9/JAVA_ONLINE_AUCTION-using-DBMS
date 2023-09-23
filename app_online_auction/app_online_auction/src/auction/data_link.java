@@ -16,9 +16,9 @@ public class data_link {
             System.out.println("The connection is established!!");
         } catch (SQLException e) {
             e.printStackTrace();
-            System.exit(1); // Exit the program on connection error
+            System.exit(1); 
         }
-        input = new Scanner(System.in); // Initialize the Scanner
+        input = new Scanner(System.in); 
     }
     
     public void sign_up() {
@@ -50,7 +50,7 @@ public class data_link {
                 user_type = type;
             } else {
                 System.out.println("Please enter 'buyer' or 'seller'");
-                return; // Exit the sign-up process if user type is invalid
+                return; 
             }
 
             String query = "INSERT INTO user_details (user_id, user_name, password, phone_num, address, email, user_type) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -96,7 +96,7 @@ public class data_link {
 
             if (rs.next()) {
                 System.out.println("Login successful!");
-                // You can add code here to perform actions after successful login
+             
             } else {
                 System.out.println("Invalid user_id or password.");
             }
